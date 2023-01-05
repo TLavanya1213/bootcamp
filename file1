@@ -1,0 +1,152 @@
+file1.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0":
+        <title>Document</title>
+        <style>
+            .myDiv {
+                border:5px solid green;
+                background-color:lightyellow;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>The div element</h1>
+        <div class="myDiv">
+            The content inside a div element.
+        </div>
+        <p>This is text outside the div element.</p>
+    </body>
+</html>
+
+
+
+file2.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .flex-container {
+                display: flex;
+                background-color: DodgerBlue;
+            }
+            .flex-container > div{
+                background-color: #f1f1f1;
+                margin:10px;
+                padding:20px;
+                font-size:30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Create a flex container</h1>
+
+        <div class="flex-container">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JAVASCRIPT</div>
+        </div>
+
+        <p>A Flexible Layout must have a parent element with the <em>display</em> property set to <em>flex</em>.</p>
+
+        <p>Direct child element(s) of the flexible container automatically becomes flexible items</p>
+    </body>
+</html>
+
+
+
+file3.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Two Numbers</title>
+        <script>
+            var num1=10;
+            var num2=2;
+            var sum=num1+num2;
+            document.write("Sum= "+sum);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
+
+output:
+Sum=12
+
+
+
+file4.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Two Numbers</title>
+        <script>
+            function add()
+            {
+                var num1,num2,sum;
+                num1=parseInt(document.getElementById("first").value);
+                num2=parseInt(document.getElementById("second").value);
+                sum=num1+num2;
+                document.getElementById("answer").value=sum;
+            }
+        </script>
+    </head>
+    <body>
+        <p>Enter the First number:<input id="first"></p>
+        <p>Enter the Second number:<input id="second"></p>
+        <button onclick="add()">Add</button>
+        <p>sum=<input id="answer"></p>
+     
+    </body>
+</html>
+
+output:
+Enter the First number:
+546
+
+Enter the Second number:
+65
+
+Add
+sum=
+611
+
+
+
+file5.html
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Click on the button to get your coordinates.</p>
+        <button onlcick="getLocation()">Try It</button>
+        <p id="demo"></p>
+        <script>
+            var x=document.getElementById("demo");
+            function getLocation(){
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                }
+                else{
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+            function showPosition(position){
+                x.innerHTML="Latitude:"+position.coords.latitude+
+                 "<br>Longitude:"+position.coords.longitude;
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
